@@ -1,0 +1,46 @@
+[project]
+name = "agentbridge"
+version = "0.1.0"
+description = "Multi-agent communication framework using A2A and MCP"
+authors = [
+  { name = "Gopikrishnan Srikumar", email = "st185769@stud.uni-stuttgart.de" }
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=1.0.15",
+    "flask>=3.1.1",
+    "gradio>=5.42.0",
+    "ipykernel>=6.30.0",
+    "langchain>=0.3.26",
+    "langchain-chroma>=0.2.5",
+    "langchain-community>=0.3.27",
+    "langchain-google-genai>=2.1.8",
+    "langchain-groq>=0.3.6",
+    "langchain-huggingface>=0.3.1",
+    "langchain-mcp-adapters>=0.1.9",
+    "langchain-openai>=0.3.33",
+    "langgraph>=0.6.6",
+    "langgraph-cli>=0.3.4",
+    "lxml>=6.0.0",
+    "mcp>=1.12.3",
+    "nbconvert>=7.16.6",
+    "notebook>=7.4.4",
+    "pandas>=2.3.1",
+    "pycollada>=0.9.2",
+    "pysdf>=0.1.9",
+    "pytest>=8.4.1",
+    "pytest-asyncio>=1.1.0",
+    "python-a2a>=0.5.9",
+    "rod>=0.4.0",
+    "sentence-transformers>=5.0.0",
+    "streamlit>=1.48.1",
+    "trimesh>=4.7.1",
+    "xmlschema>=4.1.0",
+]
+
+[project.scripts]
+agentbridge = "agentbridge.start:cli_entry"
+
+[tool.setuptools]
+package-dir = {"" = "src"}

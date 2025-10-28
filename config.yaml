@@ -1,0 +1,97 @@
+# =============================================================================
+# MCP / Tasks/ Agent Orchestration Configuration
+# -----------------------------------------------------------------------------
+# Notes for anyone changing settings:
+# - The `delegator.url` is also used as the AgentBridge framework URL.
+# - Be careful when changing supervisor URLs (`orchestrator.url` and `delegator.url`),
+#   as well as the MCP server (`mcp.url`) and the Task Manager Dashboard (`tasks.url`).
+#   Only change these if necessary. If you do change them, make sure to use
+#   the NEW addresses in any user interfaces that connect to these services.
+# - The current provider/model pairing (Google + gemini-2.5-flash) has been tested
+#   for best/stable performance. Consider updating models only for testing or
+#   if a clearly better model is available.
+# =============================================================================
+
+## MCP config
+mcp:
+  url: "http://localhost:8000/sse"     # MCP server (Server-Sent Events endpoint)
+  transport: "sse"
+
+## Task Dashboard
+tasks:
+  url: "http://localhost:14000"        # Task Manager Dashboard UI
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+# Agent Addresses and Models
+orchestrator:
+  url: "http://localhost:10000"        # Supervisor/orchestrator entrypoint
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+delegator:
+  url: "http://localhost:12000"        # ⚠️ Also used as the AgentBridge framework URL
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+prechecker:
+  url: "http://localhost:10010"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+describer:
+  url: "http://localhost:10011"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+translator_SDF:
+  url: "http://localhost:10021"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+translator_URDF:
+  url: "http://localhost:10022"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+translator_MSF:
+  url: "http://localhost:10023"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+tester:
+  url: "http://localhost:10031"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+debugger:
+  url: "http://localhost:10032"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+spawner:
+  url: "http://localhost:10041"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+spawner_AGV:
+  url: "http://localhost:10042"
+  model: "gemini-2.5-pro"
+  provider: "Google"
+
+# Available Providers and Their Models
+models:
+  OpenAI:
+    - gpt-4.1
+    - gpt-4.1-mini     
+    - gpt-4o
+    - gpt-4o-mini
+  Google:
+    - gemini-2.0-flash
+    - gemini-2.5-flash
+    - gemini-2.5-pro     # ✅ current default 
+  Groq:
+    - llama-3.3-70b-versatile
+    - deepseek-r1-distill-llama-70b
+    - openai/gpt-oss-120b
+    - gemma2-9b-it

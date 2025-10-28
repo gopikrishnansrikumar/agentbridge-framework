@@ -1,0 +1,54 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Data folder
+data
+.txt
+.urdf
+.sdf
+.mjcf
+
+# Virtual environments
+.venv
+ui/.venv
+agents/python/agents/describer/.venv
+agents/python/agents/translator/.venv
+
+# Environment files
+.env
+
+.urdf
+.sdf
+.mjcf
+.txt
+.json
+
+# langsmith files
+.langgraph_api
+
+# Backup files
+
+__pycache__/
+*.pyc
+*.pyo
+*.sqlite3
+*.log
+.env
+.envrc
+venv/
+.idea/
+.vscode/
+*.ipynb_checkpoints/
+
+
+src/agentbridge/tasks/task_lists/*.json
+src/agentbridge/agents/supervisors/orchestrator/tasks/logs/*.md
+src/agentbridge/agents/supervisors/orchestrator/tasks/logs/*.txt
+
+
+

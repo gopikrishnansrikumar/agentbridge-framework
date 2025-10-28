@@ -1,0 +1,30 @@
+[project]
+name = "a2a-agent-translator-sdf"
+version = "0.1.0"
+description = "LangGraph translator agent with A2A Protocol"
+
+dependencies = [
+    "a2a-samples",
+    "click>=8.1.8",
+    "httpx>=0.28.1",
+    "langchain-google-genai>=2.0.10",
+    "langgraph>=0.3.18",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.1.0",
+    "langchain-mcp-adapters>=0.1.0",
+    "lxml>=4.9.3",
+    "mujoco>=3.1.1",
+    "chromadb>=1.0.15",
+    "langchain-community>=0.3.27",
+    "sentence-transformers>=5.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.uv.sources]
+a2a-samples = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,40 @@
+{
+  "agents": [
+    {
+      "name": "Prechecker",
+      "address": "localhost:10010"
+    },
+    {
+      "name": "Describer",
+      "address": "localhost:10011"
+    },
+    {
+      "name": "Translator (SDF)",
+      "address": "localhost:10021"
+    },
+    {
+      "name": "Translator (URDF)",
+      "address": "localhost:10022"
+    },
+    {
+      "name": "Translator Msf",
+      "address": "localhost:10023"
+    },
+    {
+      "name": "Tester",
+      "address": "localhost:10031"
+    },
+    {
+      "name": "Debugger",
+      "address": "localhost:10032"
+    },
+    {
+      "name": "Spawner",
+      "address": "localhost:10041"
+    },
+    {
+      "name": "Spawner (AGV)",
+      "address": "localhost:10042"
+    }
+  ]
+}
