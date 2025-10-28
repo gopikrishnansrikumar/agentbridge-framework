@@ -123,7 +123,8 @@ src/agentbridge/data/
 You can obtain the data folder from one of the following sources:
 
 - 🔗 **Download directly** from:  
-  [https://bwsyncandshare.kit.edu/s/cwc4XnJnkw6YofN](https://bwsyncandshare.kit.edu/s/cwc4XnJnkw6YofN)
+  [BW Sync & Share](https://bwsyncandshare.kit.edu/s/cwc4XnJnkw6YofN)
+  [Google Drive](https://drive.google.com/drive/folders/1OletAroYdyzPgz9Z3G7AQpypaMGbZ9TC?usp=drive_link)
 - 💬 **Or request it from the developer (Author)** listed at the end of this README.
 
 Once downloaded, extract it into the `src/agentbridge/` directory so the final structure looks like:
